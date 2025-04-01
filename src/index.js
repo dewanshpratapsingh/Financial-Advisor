@@ -1,10 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Header from './components/Header/Header';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./components/Header/Header";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-      <Header title="Dewansh"/>
+    <div>  {/* ✅ Wrap inside a div */}
+      <Header title="Dewansh1" />
+    </div>
   </React.StrictMode>
 );
