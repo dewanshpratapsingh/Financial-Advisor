@@ -7,8 +7,8 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div>  {/* ✅ Wrap inside a div */}
-      <Header title="Dewansh1" />
-    </div>
+    <BrowserRouter>  
+      <Header title="Dewansh" />
+    </BrowserRouter>
   </React.StrictMode>
 );
