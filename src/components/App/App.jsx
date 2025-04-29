@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
+import Header from "./../Header/Header";
 
 const Home = () => <div>Home Page</div>;
 const About = () => <div>About Page</div>;
