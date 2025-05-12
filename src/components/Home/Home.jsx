@@ -15,6 +15,7 @@ const Home = () => {
       loans: Number(loans),
     };
     console.log("Submitted Data:", userData);
+    
   };
 
   return (
