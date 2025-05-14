@@ -5,6 +5,8 @@ const Home = () => {
   const [age, setAge] = useState("");
   const [riskCapacity, setRiskCapacity] = useState(5);
   const [loans, setLoans] = useState("");
+  const [investment, setInvestment] = useState("");
+  const [location, setLocation] = useState("India");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,9 +15,26 @@ const Home = () => {
       age: Number(age),
       riskCapacity: Number(riskCapacity),
       loans: Number(loans),
+      investment: Number(investment),
+      location: location,
     };
-    console.log("Submitted Data:", userData);
-    
+    const sendData = async () => {
+      try {
+        const params = new URLSearchParams(userData);
+        const response = await fetch(`http://localhost:4000/api/ai?${params.toString()}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        const result = await response.json();
+        console.log('Response:', result);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    sendData();
   };
 
   return (
@@ -64,6 +83,19 @@ const Home = () => {
           value={loans}
           onChange={(e) => setLoans(e.target.value)}
         />
+      </div>
+      <div>
+        <label htmlFor="investment">Investment(₹):</label>
+        <input
+          type="number"
+          id="investment"
+          value={investment}
+          onChange={(e) => setInvestment(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="location">Location:</label>
+        <input htmlFor="location" value={location} onChange={(e) => setLocation(e.target.value)} />
       </div>
 
       <button type="submit">Submit</button>
