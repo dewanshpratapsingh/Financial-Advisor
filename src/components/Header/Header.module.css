@@ -1,25 +1,31 @@
 .header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+    color: #0D141C;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
+
+  .nav{
+    margin-right: 2rem;
+  }
+
+  .title{
+    margin-left: 2rem;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
   .navList {
     list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
     gap: 1rem;
   }
   
   .navList li a {
-    color: white;
+    color: #0D141C;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
   }
   
-  .navList li a:hover {
-    text-decoration: underline;
-  }
-  
+ 

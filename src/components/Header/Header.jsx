@@ -5,12 +5,11 @@ import styles from "./Header.module.css"
 const Header = ({title}) => {
     return(
         <header className={styles.header}>
-            <h1>{title}</h1>
-            <nav>
+            <p className={styles.title}>{title}</p>
+            <nav className={styles.nav}>
                 <ul className={styles.navList}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/">Dashboards</Link></li>
+                    <li><Link to="/about">About Us</Link></li>
                 </ul>
             </nav>
         </header>
