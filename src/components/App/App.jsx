@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./../Header/Header";
 import Home from "./../Home/Home"
+import Footer from "../Footer/Footer.jsx";
 import Suggestions from "./../Suggestions/Suggestions.jsx"
 
 const App= ()=>{
@@ -11,6 +12,7 @@ const App= ()=>{
                 <Route path="/" element={<Home />}/>
                 <Route path="/suggestions" element={<Suggestions />}/>
             </Routes>
+            <Footer title="© 2025 Financial Advisor"/>
         </>
     )
 }

@@ -27,7 +27,6 @@ const  fetchSuggestions = async (financialData) => {
 export default function Suggestions(){
     const location = useLocation();
     const navigate = useNavigate();
-
     const formData = location.state;
     
     const [loading, setLoading] = useState(true);
@@ -57,7 +56,30 @@ export default function Suggestions(){
     }, [financialData]);
 
     if (loading) {
-        return <p>Generating suggestions...</p>;
+        return (
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "4rem" , height:"60vh",width:"100vw"}}>
+              <div className="spinner" />
+              <p style={{ marginTop: "1rem", fontSize: "1.2rem", fontWeight: "bold" }}>Generating suggestions...</p>
+              <style>
+                {`
+                  .spinner {
+                    width: 40px;
+                    height: 40px;
+                    border: 4px solid rgba(0, 0, 0, 0.1);
+                    border-left-color: #4b9cdb;
+                    border-radius: 50%;
+                    animation: spin 1s linear infinite;
+                  }
+          
+                  @keyframes spin {
+                    to {
+                      transform: rotate(360deg);
+                    }
+                  }
+                `}
+              </style>
+            </div>
+          );          
     }
     const { suggestions, overall_advice, cautions, financial_snapshot } = financialData;
     console.log("Financial Data:", financialData);

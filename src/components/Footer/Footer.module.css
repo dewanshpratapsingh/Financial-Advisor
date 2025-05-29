@@ -1,0 +1,33 @@
+.footer {
+    color: #0D141C;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav {
+    margin-top: 0.5rem;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navList a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.navList a:hover {
+    text-decoration: underline;
+}
