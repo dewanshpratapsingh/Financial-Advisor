@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const  fetchSuggestions = async (financialData) => {
     try {
-        const url = `https://ai-financial-advisor-backend-p7su2tpyy.vercel.app/api/ai/?salary=${financialData.salary}&emi=${financialData.emi}&location=${financialData.location}&risk=${financialData.risk}&age=${financialData.age}&investment=${financialData.investment}`;
+        const url = `https://ai-financial-advisor-backend-app.vercel.app/api/ai/?salary=${financialData.salary}&emi=${financialData.emi}&location=${financialData.location}&risk=${financialData.risk}&age=${financialData.age}&investment=${financialData.investment}`;
         const response = await fetch(url, {
             method: "GET",
             headers: {
